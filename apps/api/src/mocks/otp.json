@@ -1,0 +1,648 @@
+{
+  "summary": {
+    "measured_otp": 0.7927,
+    "target_otp": 0.85,
+    "n_events": 532108,
+    "ci_low": 0.7916,
+    "ci_high": 0.7938
+  },
+  "byRoute": [
+    {
+      "route_id": "1",
+      "route_short_name": "1",
+      "route_long_name": "1 - Brodie/Hyde Park",
+      "otp": 0.727,
+      "n_events": 9024,
+      "equity_burden_score": 0.663
+    },
+    {
+      "route_id": "2",
+      "route_short_name": "2",
+      "route_long_name": "2 - Slaughter",
+      "otp": 0.7359,
+      "n_events": 4252,
+      "equity_burden_score": 0.764
+    },
+    {
+      "route_id": "3",
+      "route_short_name": "3",
+      "route_long_name": "3 - Decker",
+      "otp": 0.758,
+      "n_events": 11862,
+      "equity_burden_score": 0.584
+    },
+    {
+      "route_id": "4",
+      "route_short_name": "4",
+      "route_long_name": "4 - Burnet/Lake Austin",
+      "otp": 0.7194,
+      "n_events": 3336,
+      "equity_burden_score": 0.828
+    },
+    {
+      "route_id": "5",
+      "route_short_name": "5",
+      "route_long_name": "5 - MLK",
+      "otp": 0.7744,
+      "n_events": 6429,
+      "equity_burden_score": 0.615
+    },
+    {
+      "route_id": "6",
+      "route_short_name": "6",
+      "route_long_name": "6 - Del Valle",
+      "otp": 0.8648,
+      "n_events": 5521,
+      "equity_burden_score": 0.181
+    },
+    {
+      "route_id": "7",
+      "route_short_name": "7",
+      "route_long_name": "7 - Dessau",
+      "otp": 0.8743,
+      "n_events": 10186,
+      "equity_burden_score": 0.125
+    },
+    {
+      "route_id": "10",
+      "route_short_name": "10",
+      "route_long_name": "10 - Manor/Tech Ridge",
+      "otp": 0.8649,
+      "n_events": 7550,
+      "equity_burden_score": 0.216
+    },
+    {
+      "route_id": "17",
+      "route_short_name": "17",
+      "route_long_name": "17 - Cesar Chavez",
+      "otp": 0.7627,
+      "n_events": 3848,
+      "equity_burden_score": 0.656
+    },
+    {
+      "route_id": "18",
+      "route_short_name": "18",
+      "route_long_name": "18 - Pleasant Valley",
+      "otp": 0.7843,
+      "n_events": 10934,
+      "equity_burden_score": 0.396
+    },
+    {
+      "route_id": "19",
+      "route_short_name": "19",
+      "route_long_name": "19 - Convict Hill/East Riverside",
+      "otp": 0.7736,
+      "n_events": 4283,
+      "equity_burden_score": 0.606
+    },
+    {
+      "route_id": "20",
+      "route_short_name": "20",
+      "route_long_name": "20 - Manor/Berkman",
+      "otp": 0.7284,
+      "n_events": 8743,
+      "equity_burden_score": 0.843
+    },
+    {
+      "route_id": "21",
+      "route_short_name": "21",
+      "route_long_name": "21 - Parmer/Slaughter",
+      "otp": 0.8843,
+      "n_events": 10796,
+      "equity_burden_score": 0.029
+    },
+    {
+      "route_id": "22",
+      "route_short_name": "22",
+      "route_long_name": "22 - Stassney/Cameron",
+      "otp": 0.6576,
+      "n_events": 7198,
+      "equity_burden_score": 0.973
+    },
+    {
+      "route_id": "27",
+      "route_short_name": "27",
+      "route_long_name": "27 - Manor",
+      "otp": 0.7181,
+      "n_events": 9118,
+      "equity_burden_score": 0.872
+    },
+    {
+      "route_id": "30",
+      "route_short_name": "30",
+      "route_long_name": "30 - Koenig",
+      "otp": 0.8566,
+      "n_events": 2193,
+      "equity_burden_score": 0.071
+    },
+    {
+      "route_id": "37",
+      "route_short_name": "37",
+      "route_long_name": "37 - Anderson/East Riverside",
+      "otp": 0.6767,
+      "n_events": 10336,
+      "equity_burden_score": 0.92
+    },
+    {
+      "route_id": "38",
+      "route_short_name": "38",
+      "route_long_name": "38 - Koenig/Govalle",
+      "otp": 0.7321,
+      "n_events": 6411,
+      "equity_burden_score": 0.732
+    },
+    {
+      "route_id": "40",
+      "route_short_name": "40",
+      "route_long_name": "40 - Anderson/Crestview",
+      "otp": 0.8615,
+      "n_events": 6044,
+      "equity_burden_score": 0.034
+    },
+    {
+      "route_id": "100",
+      "route_short_name": "100",
+      "route_long_name": "100 - Rundberg",
+      "otp": 0.7828,
+      "n_events": 11543,
+      "equity_burden_score": 0.55
+    },
+    {
+      "route_id": "101",
+      "route_short_name": "101",
+      "route_long_name": "101 - Parmer",
+      "otp": 0.7496,
+      "n_events": 10316,
+      "equity_burden_score": 0.748
+    },
+    {
+      "route_id": "103",
+      "route_short_name": "103",
+      "route_long_name": "103 - South Congress/Parmer",
+      "otp": 0.8782,
+      "n_events": 11358,
+      "equity_burden_score": 0.022
+    },
+    {
+      "route_id": "105",
+      "route_short_name": "105",
+      "route_long_name": "105 - South Congress",
+      "otp": 0.8003,
+      "n_events": 8084,
+      "equity_burden_score": 0.525
+    },
+    {
+      "route_id": "110",
+      "route_short_name": "110",
+      "route_long_name": "110 - Riverside",
+      "otp": 0.8089,
+      "n_events": 9159,
+      "equity_burden_score": 0.319
+    },
+    {
+      "route_id": "111",
+      "route_short_name": "111",
+      "route_long_name": "111 - Springdale/Wells Branch",
+      "otp": 0.8398,
+      "n_events": 4227,
+      "equity_burden_score": 0.276
+    },
+    {
+      "route_id": "200",
+      "route_short_name": "200",
+      "route_long_name": "200 - Barton Springs/East Riverside",
+      "otp": 0.8092,
+      "n_events": 9149,
+      "equity_burden_score": 0.399
+    },
+    {
+      "route_id": "201",
+      "route_short_name": "201",
+      "route_long_name": "201 - Guadalupe",
+      "otp": 0.7057,
+      "n_events": 4814,
+      "equity_burden_score": 0.798
+    },
+    {
+      "route_id": "203",
+      "route_short_name": "203",
+      "route_long_name": "203 - Lake Austin/MLK",
+      "otp": 0.7517,
+      "n_events": 6709,
+      "equity_burden_score": 0.519
+    },
+    {
+      "route_id": "207",
+      "route_short_name": "207",
+      "route_long_name": "207 - William Cannon/South Congress",
+      "otp": 0.6968,
+      "n_events": 2626,
+      "equity_burden_score": 0.871
+    },
+    {
+      "route_id": "209",
+      "route_short_name": "209",
+      "route_long_name": "209 - South Congress/Anderson",
+      "otp": 0.6963,
+      "n_events": 8151,
+      "equity_burden_score": 0.901
+    },
+    {
+      "route_id": "211",
+      "route_short_name": "211",
+      "route_long_name": "211 - Hyde Park",
+      "otp": 0.8194,
+      "n_events": 2074,
+      "equity_burden_score": 0.287
+    },
+    {
+      "route_id": "214",
+      "route_short_name": "214",
+      "route_long_name": "214 - Riverside/Manor",
+      "otp": 0.8108,
+      "n_events": 10802,
+      "equity_burden_score": 0.366
+    },
+    {
+      "route_id": "217",
+      "route_short_name": "217",
+      "route_long_name": "217 - Anderson/Del Valle",
+      "otp": 0.8663,
+      "n_events": 3679,
+      "equity_burden_score": 0.11
+    },
+    {
+      "route_id": "228",
+      "route_short_name": "228",
+      "route_long_name": "228 - Lake Austin",
+      "otp": 0.8231,
+      "n_events": 10068,
+      "equity_burden_score": 0.403
+    },
+    {
+      "route_id": "233",
+      "route_short_name": "233",
+      "route_long_name": "233 - Tech Ridge/Parmer",
+      "otp": 0.8011,
+      "n_events": 4508,
+      "equity_burden_score": 0.414
+    },
+    {
+      "route_id": "237",
+      "route_short_name": "237",
+      "route_long_name": "237 - Metric",
+      "otp": 0.8099,
+      "n_events": 2584,
+      "equity_burden_score": 0.326
+    },
+    {
+      "route_id": "240",
+      "route_short_name": "240",
+      "route_long_name": "240 - Lake Austin/Hyde Park",
+      "otp": 0.7059,
+      "n_events": 10515,
+      "equity_burden_score": 0.751
+    },
+    {
+      "route_id": "243",
+      "route_short_name": "243",
+      "route_long_name": "243 - Cameron",
+      "otp": 0.8725,
+      "n_events": 9620,
+      "equity_burden_score": 0.003
+    },
+    {
+      "route_id": "271",
+      "route_short_name": "271",
+      "route_long_name": "271 - Manor Connector",
+      "otp": 0.8561,
+      "n_events": 11007,
+      "equity_burden_score": 0.243
+    },
+    {
+      "route_id": "300",
+      "route_short_name": "300",
+      "route_long_name": "300 - Manor Connector",
+      "otp": 0.7623,
+      "n_events": 9822,
+      "equity_burden_score": 0.512
+    },
+    {
+      "route_id": "311",
+      "route_short_name": "311",
+      "route_long_name": "311 - Riverside Connector",
+      "otp": 0.7208,
+      "n_events": 3280,
+      "equity_burden_score": 0.768
+    },
+    {
+      "route_id": "320",
+      "route_short_name": "320",
+      "route_long_name": "320 - Burnet",
+      "otp": 0.8347,
+      "n_events": 8928,
+      "equity_burden_score": 0.313
+    },
+    {
+      "route_id": "323",
+      "route_short_name": "323",
+      "route_long_name": "323 - Montopolis",
+      "otp": 0.8699,
+      "n_events": 6947,
+      "equity_burden_score": 0.114
+    },
+    {
+      "route_id": "325",
+      "route_short_name": "325",
+      "route_long_name": "325 - Ben White",
+      "otp": 0.8012,
+      "n_events": 6858,
+      "equity_burden_score": 0.382
+    },
+    {
+      "route_id": "331",
+      "route_short_name": "331",
+      "route_long_name": "331 - Metric/Berkman",
+      "otp": 0.8541,
+      "n_events": 4415,
+      "equity_burden_score": 0.061
+    },
+    {
+      "route_id": "333",
+      "route_short_name": "333",
+      "route_long_name": "333 - Manor Connector",
+      "otp": 0.7996,
+      "n_events": 6152,
+      "equity_burden_score": 0.457
+    },
+    {
+      "route_id": "335",
+      "route_short_name": "335",
+      "route_long_name": "335 - Pleasant Valley Connector",
+      "otp": 0.828,
+      "n_events": 10438,
+      "equity_burden_score": 0.178
+    },
+    {
+      "route_id": "337",
+      "route_short_name": "337",
+      "route_long_name": "337 - Guadalupe/Cameron",
+      "otp": 0.7739,
+      "n_events": 5537,
+      "equity_burden_score": 0.391
+    },
+    {
+      "route_id": "339",
+      "route_short_name": "339",
+      "route_long_name": "339 - Barton Springs",
+      "otp": 0.8602,
+      "n_events": 3943,
+      "equity_burden_score": 0.225
+    },
+    {
+      "route_id": "350",
+      "route_short_name": "350",
+      "route_long_name": "350 - Manor Connector",
+      "otp": 0.682,
+      "n_events": 8726,
+      "equity_burden_score": 0.949
+    },
+    {
+      "route_id": "383",
+      "route_short_name": "383",
+      "route_long_name": "383 - Parmer/North Lamar",
+      "otp": 0.7443,
+      "n_events": 3895,
+      "equity_burden_score": 0.693
+    },
+    {
+      "route_id": "392",
+      "route_short_name": "392",
+      "route_long_name": "392 - Del Valle Connector",
+      "otp": 0.7558,
+      "n_events": 8799,
+      "equity_burden_score": 0.544
+    },
+    {
+      "route_id": "400",
+      "route_short_name": "400",
+      "route_long_name": "400 - Berkman",
+      "otp": 0.8796,
+      "n_events": 11287,
+      "equity_burden_score": 0.112
+    },
+    {
+      "route_id": "411",
+      "route_short_name": "411",
+      "route_long_name": "411 - South Congress/Oltorf",
+      "otp": 0.7591,
+      "n_events": 8732,
+      "equity_burden_score": 0.715
+    },
+    {
+      "route_id": "450",
+      "route_short_name": "450",
+      "route_long_name": "450 - Cesar Chavez/Rundberg",
+      "otp": 0.7917,
+      "n_events": 5887,
+      "equity_burden_score": 0.494
+    },
+    {
+      "route_id": "461",
+      "route_short_name": "461",
+      "route_long_name": "461 - MLK Connector",
+      "otp": 0.8899,
+      "n_events": 9958,
+      "equity_burden_score": 0.029
+    },
+    {
+      "route_id": "463",
+      "route_short_name": "463",
+      "route_long_name": "463 - Oltorf/Slaughter",
+      "otp": 0.8305,
+      "n_events": 7686,
+      "equity_burden_score": 0.289
+    },
+    {
+      "route_id": "465",
+      "route_short_name": "465",
+      "route_long_name": "465 - Manor Connector",
+      "otp": 0.7686,
+      "n_events": 6194,
+      "equity_burden_score": 0.502
+    },
+    {
+      "route_id": "466",
+      "route_short_name": "466",
+      "route_long_name": "466 - Burnet/Menchaca",
+      "otp": 0.8137,
+      "n_events": 3129,
+      "equity_burden_score": 0.472
+    },
+    {
+      "route_id": "470",
+      "route_short_name": "470",
+      "route_long_name": "470 - Crestview/MLK",
+      "otp": 0.7895,
+      "n_events": 11524,
+      "equity_burden_score": 0.407
+    },
+    {
+      "route_id": "481",
+      "route_short_name": "481",
+      "route_long_name": "481 - Cesar Chavez/Brodie",
+      "otp": 0.7066,
+      "n_events": 5385,
+      "equity_burden_score": 0.802
+    },
+    {
+      "route_id": "485",
+      "route_short_name": "485",
+      "route_long_name": "485 - Metric Connector",
+      "otp": 0.8516,
+      "n_events": 3756,
+      "equity_burden_score": 0.224
+    },
+    {
+      "route_id": "486",
+      "route_short_name": "486",
+      "route_long_name": "486 - Springdale/Govalle",
+      "otp": 0.9,
+      "n_events": 10382,
+      "equity_burden_score": 0.006
+    },
+    {
+      "route_id": "491",
+      "route_short_name": "491",
+      "route_long_name": "491 - Convict Hill/William Cannon",
+      "otp": 0.7411,
+      "n_events": 3717,
+      "equity_burden_score": 0.775
+    },
+    {
+      "route_id": "550",
+      "route_short_name": "550",
+      "route_long_name": "550 - MLK/Rundberg",
+      "otp": 0.6982,
+      "n_events": 4856,
+      "equity_burden_score": 0.801
+    },
+    {
+      "route_id": "663",
+      "route_short_name": "663",
+      "route_long_name": "663 - Crestview/North Lamar",
+      "otp": 0.7061,
+      "n_events": 11023,
+      "equity_burden_score": 0.987
+    },
+    {
+      "route_id": "670",
+      "route_short_name": "670",
+      "route_long_name": "670 - William Cannon",
+      "otp": 0.7868,
+      "n_events": 3191,
+      "equity_burden_score": 0.571
+    },
+    {
+      "route_id": "672",
+      "route_short_name": "672",
+      "route_long_name": "672 - Ben White/Riverside",
+      "otp": 0.7958,
+      "n_events": 5240,
+      "equity_burden_score": 0.402
+    },
+    {
+      "route_id": "800",
+      "route_short_name": "800",
+      "route_long_name": "800 - Pleasant Valley Connector",
+      "otp": 0.8179,
+      "n_events": 9112,
+      "equity_burden_score": 0.261
+    },
+    {
+      "route_id": "801",
+      "route_short_name": "801",
+      "route_long_name": "801 - Pleasant Valley Connector",
+      "otp": 0.7626,
+      "n_events": 4023,
+      "equity_burden_score": 0.587
+    },
+    {
+      "route_id": "803",
+      "route_short_name": "803",
+      "route_long_name": "803 - Lake Austin Connector",
+      "otp": 0.8385,
+      "n_events": 8588,
+      "equity_burden_score": 0.251
+    },
+    {
+      "route_id": "837",
+      "route_short_name": "837",
+      "route_long_name": "837 - Dessau/Anderson",
+      "otp": 0.7359,
+      "n_events": 8678,
+      "equity_burden_score": 0.585
+    },
+    {
+      "route_id": "935",
+      "route_short_name": "935",
+      "route_long_name": "935 - Koenig/Convict Hill",
+      "otp": 0.8054,
+      "n_events": 2659,
+      "equity_burden_score": 0.409
+    },
+    {
+      "route_id": "980",
+      "route_short_name": "980",
+      "route_long_name": "980 - Riverside Connector",
+      "otp": 0.8598,
+      "n_events": 7240,
+      "equity_burden_score": 0.053
+    },
+    {
+      "route_id": "985",
+      "route_short_name": "985",
+      "route_long_name": "985 - William Cannon Connector",
+      "otp": 0.88,
+      "n_events": 3064,
+      "equity_burden_score": 0.091
+    }
+  ],
+  "byEquityQuintile": [
+    {
+      "quintile": 1,
+      "otp": 0.7022,
+      "n_events": 107131,
+      "mean_household_income": 32762,
+      "pct_minority": 0.795
+    },
+    {
+      "quintile": 2,
+      "otp": 0.7531,
+      "n_events": 101541,
+      "mean_household_income": 49976,
+      "pct_minority": 0.69
+    },
+    {
+      "quintile": 3,
+      "otp": 0.7933,
+      "n_events": 106854,
+      "mean_household_income": 63919,
+      "pct_minority": 0.577
+    },
+    {
+      "quintile": 4,
+      "otp": 0.8316,
+      "n_events": 99007,
+      "mean_household_income": 80454,
+      "pct_minority": 0.438
+    },
+    {
+      "quintile": 5,
+      "otp": 0.8761,
+      "n_events": 117575,
+      "mean_household_income": 92501,
+      "pct_minority": 0.355
+    }
+  ]
+}
