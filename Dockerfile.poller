@@ -1,0 +1,17 @@
+FROM oven/bun:1.3-alpine AS base
+WORKDIR /app
+
+# Copy root + every workspace manifest so `bun install` can resolve the
+# workspace graph against the frozen lockfile (all three packages are listed
+# in the root `workspaces` glob, so all manifests must be present).
+COPY package.json bun.lock tsconfig.base.json ./
+COPY packages/db/package.json ./packages/db/
+COPY packages/poller/package.json ./packages/poller/
+COPY packages/loader/package.json ./packages/loader/
+RUN bun install --frozen-lockfile
+
+# Only the poller actually runs here; it needs @at/db at runtime.
+COPY packages/db ./packages/db
+COPY packages/poller ./packages/poller
+
+CMD ["bun", "run", "--filter", "@at/poller", "start"]
