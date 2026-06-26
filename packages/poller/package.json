@@ -1,0 +1,13 @@
+{
+  "name": "@at/poller",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "@at/db": "workspace:*",
+    "gtfs-realtime-bindings": "2.0.0"
+  }
+}
