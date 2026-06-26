@@ -1,0 +1,16 @@
+{
+  "name": "@at/loader",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "load": "bun run src/loadStaticGtfs.ts",
+    "compute-otp": "bun run src/computeOtp.ts",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@at/db": "workspace:*",
+    "csv-parse": "7.0.0",
+    "fflate": "0.8.3"
+  }
+}
