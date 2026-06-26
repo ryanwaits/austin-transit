@@ -1,0 +1,28 @@
+{
+  "name": "austin-transit",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "migrate": "bun packages/db/src/migrate.ts",
+    "load:static": "bun packages/loader/src/loadStaticGtfs.ts",
+    "poll": "bun packages/poller/src/index.ts",
+    "compute:otp": "bun packages/loader/src/computeOtp.ts",
+    "verify:feeds": "bun tools/verify-feeds.ts",
+    "dev:web": "bun run --filter @at/web dev",
+    "dev:api": "bun run --filter @at/api dev",
+    "dev": "bun run --filter '@at/*' --parallel dev",
+    "build:web": "bun run --filter @at/web build",
+    "generate:mocks": "bun run --filter @at/api generate-mocks",
+    "test": "bun test",
+    "lint": "biome check .",
+    "format": "biome format --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.1",
+    "bun-types": "1.3.14"
+  }
+}
