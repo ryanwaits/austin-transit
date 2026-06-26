@@ -1,0 +1,278 @@
+@import "tailwindcss";
+
+/* ============================================================================
+   Design tokens — Pudding-style editorial system. See DESIGN.md.
+   Exact hex values are intentional (Paul Tol qualitative palette for data).
+   ========================================================================== */
+:root {
+  /* Background and surfaces */
+  --color-bg: #fffef5; /* warm cream, the signature */
+  --color-surface: #ffffff;
+  --color-surface-warm: #fbf3d8; /* parchment, for callouts */
+
+  /* Text */
+  --color-fg: #262626;
+  --color-fg-muted: #5c5c5c;
+  --color-fg-faint: #8a8a8a;
+
+  /* Borders / dividers */
+  --color-border: #e8e4d5;
+  --color-border-strong: #b8b4a5;
+
+  /* Categorical data palette (Paul Tol qualitative) */
+  --cat-blue: #4477aa;
+  --cat-red: #ee6677;
+  --cat-green: #228833;
+  --cat-yellow: #ccbb44;
+  --cat-cyan: #66ccee;
+  --cat-purple: #aa3377;
+  --cat-gray: #bbbbbb;
+
+  /* Semantic for our domain */
+  --equity-burdened: #aa3377;
+  --equity-advantaged: #4477aa;
+  --equity-neutral: #bbbbbb;
+
+  /* On-time classification */
+  --otp-ontime: #228833;
+  --otp-early: #66ccee;
+  --otp-late: #ee6677;
+  --otp-missing: #bbbbbb;
+
+  /* Fonts — *-loaded are set by next/font; here we compose the stacks. */
+  --font-serif: var(--font-serif-loaded), "Iowan Old Style", "Times New Roman", serif;
+  --font-sans: var(--font-sans-loaded), system-ui, sans-serif;
+
+  /* Type scale */
+  --text-h1: 48px;
+  --text-h2: 36px;
+  --text-h3: 28px;
+  --text-h4: 24px;
+  --text-h5: 22px;
+  --text-h6: 20px;
+  --text-body: 18px;
+  --text-small: 15px;
+  --text-caption: 13px;
+
+  --leading-body: 1.55;
+  --leading-tight: 1.2;
+
+  /* Layout widths */
+  --content-narrow: 640px;
+  --content-medium: 830px;
+  --content-wide: 1080px;
+  --content-bleed: 1280px;
+  --space-page-x: clamp(16px, 6vw, 64px);
+
+  /* Motion */
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Register a few tokens with Tailwind so utilities resolve to our system. */
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-fg: var(--color-fg);
+  --color-fg-muted: var(--color-fg-muted);
+  --color-border: var(--color-border);
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
+}
+
+/* ============================================================================
+   Base
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-serif);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  font-weight: 600; /* elegant, not extra-bold */
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: var(--color-border-strong);
+  text-underline-offset: 0.15em;
+}
+
+::selection {
+  background: var(--color-surface-warm);
+}
+
+:focus-visible {
+  outline: 2px solid var(--equity-advantaged);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Tabular numerals everywhere numbers carry meaning (no layout shift). */
+.tabular,
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================================
+   Editorial layout helpers
+   ========================================================================== */
+.col {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-page-x);
+}
+.col-narrow {
+  max-width: calc(var(--content-narrow) + 2 * var(--space-page-x));
+}
+.col-medium {
+  max-width: calc(var(--content-medium) + 2 * var(--space-page-x));
+}
+.col-wide {
+  max-width: calc(var(--content-wide) + 2 * var(--space-page-x));
+}
+.col-bleed {
+  max-width: calc(var(--content-bleed) + 2 * var(--space-page-x));
+}
+
+/* Prose rhythm inside the narrow column */
+.prose > * + * {
+  margin-top: 1.15em;
+}
+.prose p {
+  max-width: 68ch;
+}
+
+/* UI text: Inter, the only place sans appears */
+.ui {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.caption {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  color: var(--color-fg-muted);
+  line-height: 1.45;
+}
+
+/* ============================================================================
+   Scrollytelling: sticky viz + scrolling steps (desktop), stacked (mobile)
+   ========================================================================== */
+.scrolly {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 40fr) minmax(0, 60fr);
+  column-gap: clamp(28px, 4vw, 72px);
+  max-width: calc(var(--content-wide) + 2 * var(--space-page-x));
+  margin-inline: auto;
+  padding-inline: var(--space-page-x);
+}
+.scrolly-steps {
+  grid-column: 1;
+  grid-row: 1;
+}
+.scrolly-viz {
+  grid-column: 2;
+  grid-row: 1;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scrolly--viz-left .scrolly-steps {
+  grid-column: 2;
+}
+.scrolly--viz-left .scrolly-viz {
+  grid-column: 1;
+}
+.scrolly-viz-inner {
+  width: 100%;
+}
+.scrolly-step {
+  min-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.scrolly-step:first-child {
+  min-height: 70vh;
+}
+.scrolly-step .step-kicker {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-fg-faint);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 860px) {
+  .scrolly {
+    grid-template-columns: 1fr;
+  }
+  /* Stack: viz (DOM-first) sticks to the top, steps scroll beneath it. */
+  .scrolly-steps,
+  .scrolly--viz-left .scrolly-steps {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .scrolly-viz,
+  .scrolly--viz-left .scrolly-viz {
+    grid-column: 1;
+    grid-row: 1;
+    height: 54vh;
+    top: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .scrolly-step {
+    min-height: 72vh;
+  }
+}
+
+/* ============================================================================
+   Motion: opt every animation out under reduced-motion
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
