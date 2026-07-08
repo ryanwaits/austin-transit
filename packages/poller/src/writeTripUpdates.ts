@@ -66,7 +66,20 @@ export async function writeTripUpdates(
 
   const idByEntity = new Map(inserted.map((r) => [r.entity_id, r.id]));
 
-  const children: Record<string, unknown>[] = [];
+  // JSON-serialized shape passed to json_to_recordset (a type alias, not an
+  // interface, so it satisfies postgres.js's index-signatured JSONValue).
+  type StopTimeUpdateJson = {
+    trip_update_id: string;
+    stop_sequence: number | null;
+    stop_id: string | null;
+    arrival_time: string | null;
+    arrival_delay: number | null;
+    departure_time: string | null;
+    departure_delay: number | null;
+    schedule_relationship: string | null;
+  };
+
+  const children: StopTimeUpdateJson[] = [];
   for (const e of tus) {
     const parentId = idByEntity.get(e.id as string);
     if (parentId == null) continue;

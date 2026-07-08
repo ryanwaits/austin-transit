@@ -1,6 +1,6 @@
 import { Readable, Transform } from "node:stream";
 import { pipeline } from "node:stream/promises";
-import type { Sql } from "@at/db";
+import type { Sql, Tx } from "@at/db";
 import { parse } from "csv-parse";
 
 // Quote a field for Postgres COPY ... FORMAT csv. An empty/absent value is
@@ -21,7 +21,7 @@ function csvField(v: unknown): string {
  * transaction handle. Returns the number of data rows copied.
  */
 export async function copyCsv(
-  sql: Sql,
+  sql: Sql | Tx,
   table: string,
   columns: readonly string[],
   bytes: Uint8Array,

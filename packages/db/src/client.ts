@@ -1,4 +1,4 @@
-import postgres from "postgres";
+import postgres, { type TransactionSql } from "postgres";
 
 // GTFS static loads hold one long transaction open while streaming millions of
 // stop_times rows; don't let postgres.js time the connection out.
@@ -29,3 +29,7 @@ export const sql = databaseUrl
     });
 
 export type Sql = typeof sql;
+
+// Handle received inside sql.begin() callbacks; not assignable to Sql, so
+// helpers that run both inside and outside a transaction take Sql | Tx.
+export type Tx = TransactionSql<Record<string, never>>;

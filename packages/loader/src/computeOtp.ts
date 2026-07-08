@@ -43,8 +43,15 @@ async function main(): Promise<void> {
   const query = await Bun.file(OTP_SQL).text();
   const rows = await sql.unsafe<ClassRow[]>(query, [start, end, routes]);
 
-  const counts: Record<string, number> = { early: 0, on_time: 0, late: 0, missing: 0 };
-  for (const r of rows) counts[r.classification] = Number(r.n);
+  const counts: Record<"early" | "on_time" | "late" | "missing", number> = {
+    early: 0,
+    on_time: 0,
+    late: 0,
+    missing: 0,
+  };
+  for (const r of rows) {
+    if (r.classification in counts) counts[r.classification as keyof typeof counts] = Number(r.n);
+  }
 
   const total = counts.early + counts.on_time + counts.late + counts.missing;
   const observed = counts.early + counts.on_time + counts.late; // excludes 'missing'
