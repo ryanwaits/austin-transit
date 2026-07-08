@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.13
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Lint (Biome)
+        run: bunx biome check .
+
+      - name: Typecheck (all workspaces)
+        run: |
+          for dir in packages/db packages/poller packages/loader apps/api apps/web; do
+            echo "--- $dir"
+            (cd "$dir" && bunx tsc --noEmit)
+          done
+
+      - name: Test
+        run: bun test
+
+      - name: Build web
+        run: bun run build:web
